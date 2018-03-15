@@ -12,21 +12,17 @@ tags:
 
 ## 安装
    以下是在CentOS 7 下安装步骤
-
 1. 安装java 1.8.0  
   ```
   yum install java-1.8.0-openjdk.x86_64
   ```
 
+1. 下载 sapcc-2.10.2-linux-x64.zip
 
-2. 下载 sapcc-2.10.2-linux-x64.zip
-
-
-3. 安装  
+1. 安装  
     `rpm -i com.sap.scc-ui-2.10.2-1.x86_64.rpm`
 
-
-4. 启动  
+1. 启动  
    `service  scc_daemon start`
 
 
@@ -38,10 +34,10 @@ tags:
    3. 修改口令 chem123
 
    4. 配置与SAP Cloud的连接  
-     Region Host :
-     Subaccount : `bf875ea9-aa87-49e7-bcb2-2d602c64a70b`
-     Subaccount User : `trial`
-     Password :
+       Region Host :  
+       Subaccount :   `bf875ea9-aa87-49e7-bcb2-2d602c64a70b`  
+       Subaccount User : `trial`  
+       Password :
 
 
 
