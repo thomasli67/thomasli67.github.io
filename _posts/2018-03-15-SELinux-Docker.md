@@ -135,3 +135,4 @@ docker会自动执行`chcon -Rt svirt_sandbox_file_t /www2 `
 ## 参考
 [Wiki:Security-Enhanced Linux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux)
 [Using Volumes with Docker can Cause Problems with SELinux](http://www.projectatomic.io/blog/2015/06/using-volumes-with-docker-can-cause-problems-with-selinux/)
+[Use volumes](https://docs.docker.com/storage/volumes/)
