@@ -106,7 +106,7 @@ chcon -Rt svirt_sandbox_file_t  /www
 ```
 
 ## 另一种解决办法
-docker 1.7 的-v可以使用z和Z选项，如
+docker 1.7 以后的版本，卷参数-v可以使用z和Z选项，如
 ```
 docker run --name my-nginx -p 80:80 -v /www2:/usr/share/nginx/html:z -d nginx
 ```
