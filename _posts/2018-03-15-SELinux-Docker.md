@@ -67,18 +67,18 @@ Max kernel policy version:      28
 ```
 
 4. 检查文件属性
- ```
+```
  ls -Z /
- ```
+```
  返回
- ```
+```
 ......
  drwxrwxrwt. root root system_u:object_r:tmp_t:s0       tmp
 drwxr-xr-x. root root system_u:object_r:usr_t:s0       usr
 drwxr-xr-x. root root system_u:object_r:var_t:s0       var
 drwxr-xr-x. root root unconfined_u:object_r:default_t:s0 www
- ```
-
+```
+查看/www
  ```
  ls -Z /www
  ```
@@ -86,7 +86,6 @@ drwxr-xr-x. root root unconfined_u:object_r:default_t:s0 www
  ```
  -rw-r--r--. root root unconfined_u:object_r:default_t:s0 beginners_guide.html
 -rw-r--r--. root root unconfined_u:object_r:default_t:s0 index.html
-
  ```
 
 5. 查看Dockers容器使用的label
@@ -97,7 +96,6 @@ ps -efZ | grep ngnix
 ```
 system_u:system_r:svirt_lxc_net_t:s0:c30,c173 root 16657 16637  0 14:24 ? 00:00:00 nginx: master process nginx -g daemon off;
 system_u:system_r:svirt_lxc_net_t:s0:c30,c173 101 16683 16657  0 14:24 ? 00:00:00 nginx: worker process
-
 ```
 
 6. 修改文件属性
