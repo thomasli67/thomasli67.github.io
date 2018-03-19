@@ -53,7 +53,6 @@ SELINUXTYPE=targeted
 sestatus -v
 ```
 返回  
-
 ```
 SELinux status:                 enabled
 SELinuxfs mount:                /sys/fs/selinux
@@ -64,22 +63,7 @@ Mode from config file:          enforcing
 Policy MLS status:              enabled
 Policy deny_unknown status:     allowed
 Max kernel policy version:      28
-
-Process contexts:
-Current context:                unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
-Init context:                   system_u:system_r:init_t:s0
-/usr/sbin/sshd                  unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
-
-File contexts:
-Controlling terminal:           unconfined_u:object_r:user_devpts_t:s0
-/etc/passwd                     system_u:object_r:passwd_file_t:s0
-/etc/shadow                     system_u:object_r:shadow_t:s0
-/bin/bash                       system_u:object_r:shell_exec_t:s0
-/bin/login                      system_u:object_r:login_exec_t:s0
-/bin/sh                         system_u:object_r:bin_t:s0 -> system_u:object_r:shell_exec_t:s0
-/sbin/agetty                    system_u:object_r:getty_exec_t:s0
-/sbin/init                      system_u:object_r:bin_t:s0 -> system_u:object_r:init_exec_t:s0
-/usr/sbin/sshd                  system_u:object_r:sshd_exec_t:s0
+....
 ```
 
 4. 检查文件属性
