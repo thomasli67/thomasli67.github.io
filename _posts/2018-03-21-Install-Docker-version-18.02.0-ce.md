@@ -33,13 +33,13 @@ systemctl enable docker
 ```
 
 ## 配置docker使用proxy
-1. 建立如下目录
+#### 1.建立如下目录
 ```
 mkdir -p /etc/systemd/system/docker.service.d
 
 ```    
 
-2. 建立配置文件
+#### 2.建立配置文件
 /etc/systemd/system/docker.service.d/http-proxy.conf
 ```
 [Service]
@@ -47,7 +47,7 @@ Environment="HTTP_PROXY=http://10.8.7.19:3128/" "NO_PROXY=localhost,127.0.0.1,do
 
 ```
 
-3. 刷新系统、重启docker
+#### 3.刷新系统、重启docker
 ```
 systemctl daemon-reload
 systemctl restart docker
