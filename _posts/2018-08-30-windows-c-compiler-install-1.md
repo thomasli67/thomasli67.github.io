@@ -178,6 +178,7 @@ vc版本与vs版本对应关系如下所示：
 注意：Python 3.5升级了distutils，默认使用_msvccompiler.py，在这个文件中可以找到：“ if version >= 14 and version > best_version: ”这里的14说明VS版本要在14以上才可以。所以根据这句，我们要安装最新的Visual Studio2015。
 
 ### 微软官方解决方案
+
 | Python Version| You will need |
 | ------------- |---------------|
 | 3.5 and later |Update: Install Visual Studio 2017, select the Python development workload and the Native development tools option.    [Visual C++ Build Tools 2015](http://go.microsoft.com/fwlink/?LinkId=691126) or [Visual Studio 2015](https://visualstudio.com/) |
