@@ -103,9 +103,10 @@ Open the Start menu or Start screen, and search for "Visual C++ 2008 32-bit Comm
 Step 2: Set environment variables
 
 Set these environment variables in the command prompt you just opened.
-
+```cmd
 SET DISTUTILS_USE_SDK=1
 SET MSSdk=1
+```
 Reference http://bugs.python.org/issue23246
 
 Step 3: Build and install
@@ -178,7 +179,7 @@ vc版本与vs版本对应关系如下所示：
 
 ### 微软官方解决方案
 | Python Version| You will need |
-| ------------- |-------------|
+| ------------- |---------------|
 | 3.5 and later |Update: Install Visual Studio 2017, select the Python development workload and the Native development tools option.    [Visual C++ Build Tools 2015](http://go.microsoft.com/fwlink/?LinkId=691126) or [Visual Studio 2015](https://visualstudio.com/) |
 | 3.3 and 3.4   | [Windows SDK for Windows 7 and .NET 4.0](https://www.microsoft.com/download/details.aspx?id=8279) (Alternatively, Visual Studio 2010 if you have access to it)      |
 | 2.6 to 3.2    | [Microsoft Visual C++ Compiler for Python 2.7](https://www.microsoft.com/download/details.aspx?id=44266)      |
