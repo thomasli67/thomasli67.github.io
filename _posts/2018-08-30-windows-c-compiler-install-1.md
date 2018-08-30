@@ -125,7 +125,7 @@ build可以成功,使用如下命令安装
 python setup.py install
 ```
 
-1. 源码打包
+2. 源码打包
 
 ```cmd
 python setup.py sdist
@@ -133,13 +133,31 @@ python setup.py sdist
 
 在dist目录下生成源代码包pycrypto-2.7a1.zip
 
-1. 二进制打包
+3. 二进制打包
 
 ```cmd
 python setup.py bdist
 ```
 
 在dist目录下生成windows下二进制包pycrypto-2.7a1.win-amd64.zip
+
+新版setup.py(使用from setuptools import setup, Extension，旧版from distutils.core import setup, Extension),如编译dulwith模块
+
+1. egg
+
+```cmd
+python setup.py bdist_egg
+```
+
+dist 下生成dulwich-0.19.6-py2.7-win-amd64.egg
+
+2. wheel
+
+```cmd
+python setup.py bdist_wheel
+```
+
+dist 下生成dulwich-0.19.6-cp27-cp27m-win_amd64.whl
 
 ### 注释
 
@@ -168,5 +186,8 @@ vc版本与vs版本对应关系如下所示：
 ### 参考
 
 [Microsoft Visual C++ Compiler for Python 2.7](http://www.microsoft.com/en-us/download/details.aspx?id=44266)  
-[How to deal with the pain of “unable to find vcvarsall.bat”](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/)
-[Python Wheels](https://pythonwheels.com/)
+[How to deal with the pain of “unable to find vcvarsall.bat”](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/)  
+[Python Wheels](https://pythonwheels.com/)    
+[PEP 427 -- The Wheel Binary Package Format 1.0](https://legacy.python.org/dev/peps/pep-0427/)  
+[Python on Wheels](http://lucumr.pocoo.org/2014/1/27/python-on-wheels/)
+
