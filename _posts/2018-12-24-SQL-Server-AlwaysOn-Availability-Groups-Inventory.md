@@ -2,7 +2,7 @@
 layout: post
 title:  "SQL Server AlwaysOn 可用组服务器清单"
 date:   2018-12-24 15:00:45 +0800
-categories: 
+categories: [Microsoft, SQL Server]
  - Microsoft
  - SQL Server
 tags: 
