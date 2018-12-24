@@ -2,10 +2,13 @@
 layout: post
 title:  "SQL Server AlwaysOn 可用组服务器清单"
 date:   2018-12-24 15:00:45 +0800
-categories: SQL Server
+categories: 
+ - Microsoft
+ - SQL Server
 tags: 
  - SQL Server
  - AlwaysOn
+ - SQL Scripts
 ---
 
 ## SQL Server AlwaysOn 可用性组服务器清单
