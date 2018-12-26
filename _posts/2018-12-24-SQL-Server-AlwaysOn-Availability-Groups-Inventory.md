@@ -9,9 +9,6 @@ tags:
  - SQL Scripts
 ---
 
-## SQL Server AlwaysOn 可用性组服务器清单
-
-
 用以下SQL脚本可以获得SQL Server AlwaysOn 可用性组中的服务器清单。在PRIMARY角色的服务器上执行，可以获得所有服务器；在SECONDARY角色的服务器上执行，只获得本地服务器。    
 ```
 SELECT
