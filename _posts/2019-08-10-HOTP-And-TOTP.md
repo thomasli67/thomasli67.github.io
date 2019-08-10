@@ -93,10 +93,10 @@ HOTP 算法中的 C 是使用当前 Unix 时间戳 减去初始计数时间戳�
 
 ## 更多参考资源:
 
-[FreeOTP is a two-factor authentication application for systems utilizing one-time password protocols.](https://github.com/freeotp/freeotp-android)
-[andOTP is a two-factor authentication App for Android 4.4+.](https://github.com/andOTP/andOTP)
-[HOTP (HMAC-Based One-Time Password Algorithm) RFC 4226](http://www.ietf.org/rfc/rfc4226.txt)
-[TOTP (Time-Based One-Time Password Algorithm) RFC 6238](http://www.ietf.org/rfc/rfc6238.txt)
+[FreeOTP is a two-factor authentication application for systems utilizing one-time password protocols.](https://github.com/freeotp/freeotp-android)    
+[andOTP is a two-factor authentication App for Android 4.4+.](https://github.com/andOTP/andOTP)    
+[HOTP (HMAC-Based One-Time Password Algorithm) RFC 4226](http://www.ietf.org/rfc/rfc4226.txt)    
+[TOTP (Time-Based One-Time Password Algorithm) RFC 6238](http://www.ietf.org/rfc/rfc6238.txt)    
 [Accessing GitHub using two-factor authentication](https://help.github.com/en/articles/accessing-github-using-two-factor-authentication)
 
 
