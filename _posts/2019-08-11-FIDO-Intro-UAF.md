@@ -13,7 +13,7 @@ tags:
 
 FIDO（快速在线身份认证），作为有可能因为其更好的安全性、便捷性、适配性以及隐私保护，并结合日趋成熟的生物特征识别技术，作为最有可能替代传统的静/动态口令验证方式替代的行业最佳实践，已经从由联想、PayPal等6家企业创立之初，扩大到现在的252家成员企业（注：截止到2016年7月），近乎囊括业界所有领先IT厂商。
 
-cover
+![](/assets/images/FIDO_Intro/cover.jpg)
 
 为何FIDO会如此受行业欢迎？它在技术实现上又有哪些优势？
 
@@ -90,15 +90,6 @@ cttl-800
 [TOTP (Time-Based One-Time Password Algorithm) RFC 6238](http://www.ietf.org/rfc/rfc6238.txt)    
 [Accessing GitHub using two-factor authentication](https://help.github.com/en/articles/accessing-github-using-two-factor-authentication)
 
-RESOURCES
----------
-Web site: <http://www.arduino.cc/>
-
-Help on projects and programming: <http://forum.arduino.cc/>
-
-Report bugs: <http://github.com/arduino/Arduino/issues>
-
-IDE and framework development mailing list: <https://groups.google.com/a/arduino.cc/forum/#!forum/developers>
 
 
 
