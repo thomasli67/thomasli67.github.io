@@ -69,9 +69,9 @@ Transformer 的 encoder 是一次性读取整个文本序列，而不是从左�
 
 这样就需要：
 
-    * 在 encoder 的输出上添加一个分类层
-    * 用嵌入矩阵乘以输出向量，将其转换为词汇的维度
-    * 用 softmax 计算词汇表中每个单词的概率
+* 在 encoder 的输出上添加一个分类层
+* 用嵌入矩阵乘以输出向量，将其转换为词汇的维度
+* 用 softmax 计算词汇表中每个单词的概率
 BERT 的损失函数只考虑了 mask 的预测值，忽略了没有掩蔽的字的预测。这样的话，模型要比单向模型收敛得慢，不过结果的情境意识增加了。
 
 
@@ -108,12 +108,12 @@ BERT 可以用于各种NLP任务，只需在核心模型中添加一个层，例
 
 ## 更多参考资源:
 
-[Google论文 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
-[BERT – State of the Art Language Model for NLP](https://www.lyrn.ai/2018/11/07/explained-bert-state-of-the-art-language-model-for-nlp/)
-[【NLP】Attention原理和源码解析](https://zhuanlan.zhihu.com/p/43493999)
-[【NLP】Transformer详解](https://zhuanlan.zhihu.com/p/44121378)
-[【NLP】语言模型和迁移学习](https://zhuanlan.zhihu.com/p/42618178)
-[GitHub上的BERT的代码](https://github.com/google-research/bert)
+[Google论文 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)    
+[BERT – State of the Art Language Model for NLP](https://www.lyrn.ai/2018/11/07/explained-bert-state-of-the-art-language-model-for-nlp/)    
+[【NLP】Attention原理和源码解析](https://zhuanlan.zhihu.com/p/43493999)    
+[【NLP】Transformer详解](https://zhuanlan.zhihu.com/p/44121378)    
+[【NLP】语言模型和迁移学习](https://zhuanlan.zhihu.com/p/42618178)    
+[GitHub上的BERT的代码](https://github.com/google-research/bert)    
 
 
 
