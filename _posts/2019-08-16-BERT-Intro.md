@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "简单介绍目前Google最强NLP模型：BERT"
+title:  "预训练语言模型BERT学习之一"
 date:   2019-08-16 10:40:45 +0800
 categories: [AI, NLP]
 tags: 
@@ -104,6 +104,8 @@ BERT 可以用于各种NLP任务，只需在核心模型中添加一个层，例
 在问答任务（例如SQUAD v1.1）中，问答系统需要接收有关文本序列的 question，并且需要在序列中标记 answer。 可以使用 BERT 学习两个标记 answer 开始和结尾的向量来训练Q＆A模型。
 在命名实体识别（NER）中，系统需要接收文本序列，标记文本中的各种类型的实体（人员，组织，日期等）。 可以用 BERT 将每个 token 的输出向量送到预测 NER 标签的分类层。
 在 fine-tuning 中，大多数超参数可以保持与 BERT 相同，在论文中还给出了需要调整的超参数的具体指导（第3.5节）。
+
+![](/assets/images/BERT_Intro/05.webp)
 
 
 ## 更多参考资源:
