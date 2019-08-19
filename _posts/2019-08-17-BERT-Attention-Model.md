@@ -1,5 +1,6 @@
 ---
 layout: post
+mathjax: true
 title:  "预训练语言模型BERT学习之三 - Attention Model"
 date:   2019-08-17 11:40:45 +0800
 categories: [AI, NLP]
@@ -192,4 +193,4 @@ Self Attention与传统的Attention机制非常的不同：传统的Attention是
 [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
 
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
