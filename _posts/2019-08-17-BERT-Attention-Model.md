@@ -69,7 +69,6 @@ $$
   \right)
 \end{equation} 
 $$
-
 $$
 \begin{equation}
   Y =
