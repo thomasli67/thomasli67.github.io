@@ -64,17 +64,17 @@ Transformer 的 encoder 是一次性读取整个文本序列，而不是从左�
 
 当我们在训练语言模型时，有一个挑战就是要定义一个预测目标，很多模型在一个序列中预测下一个单词，“The child came home from ___”。双向的方法在这样的任务中是有限制的，为了克服这个问题，BERT 使用两个策略:
 
-1. Masked LM (MLM)
+#### 1. Masked LM (MLM)
 在将单词序列输入给 BERT 之前，每个序列中有 15％ 的单词被 [MASK] token 替换。 然后模型尝试基于序列中其他未被 mask 的单词的上下文来预测被掩盖的原单词。
 这样就需要：
  * 在 encoder 的输出上添加一个分类层
  * 用嵌入矩阵乘以输出向量，将其转换为词汇的维度
  * 用 softmax 计算词汇表中每个单词的概率
- 
+
 BERT 的损失函数只考虑了 mask 的预测值，忽略了没有掩蔽的字的预测。这样的话，模型要比单向模型收敛得慢，不过结果的情境意识增加了。
 ![图片 by Rani Horev](/assets/images/BERT_Intro/03.webp)
 
-2. Next Sentence Prediction (NSP)
+#### 2. Next Sentence Prediction (NSP)
 在 BERT 的训练过程中，模型接收成对的句子作为输入，并且预测其中第二个句子是否在原始文档中也是后续句子。
 在训练期间，50％ 的输入对在原始文档中是前后关系，另外 50％ 中是从语料库中随机组成的，并且是与第一句断开的。
 
