@@ -68,6 +68,9 @@ $$
   \end{array}
   \right)
 \end{equation} 
+$$
+
+$$
 \begin{equation}
   Y =
   \left(
