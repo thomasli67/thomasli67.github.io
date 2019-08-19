@@ -11,15 +11,20 @@ tags:
  - Attention
 ---
 
-1. 什么是Attention机制？
+### 什么是Attention机制？
 　　最近两年，注意力模型（Attention Model）被广泛使用在自然语言处理、图像识别及语音识别等各种不同类型的深度学习任务中，是深度学习技术中最值得关注与深入了解的核心技术之一。
 
 　　当我们人在看一样东西的时候，我们当前时刻关注的一定是我们当前正在看的这样东西的某一地方，换句话说，当我们目光移到别处时，注意力随着目光的移动也在转移，这意味着，当人们注意到某个目标或某个场景时，该目标内部以及该场景内每一处空间位置上的注意力分布是不一样的。---------（思考：对于图片，会有些特别显眼的场景会率先吸引住注意力，那是因为脑袋中对这类东西很敏感。对于文本，我们大都是带目的性的去读，顺序查找，顺序读，但是在理解的过程中，我们是根据我们自带的目的去理解，去关注的。 注意力模型应该与具体的目的(或者任务)相结合。）
 
 　　从Attention的作用角度出发，我们就可以从两个角度来分类Attention种类：Spatial Attention 空间注意力(图片)和Temporal Attention 时间注意力(序列)。更具实际的应用，也可以将Attention分为Soft Attention和Hard Attention。Soft Attention是所有的数据都会注意，都会计算出相应的注意力权值，不会设置筛选条件。Hard Attention会在生成注意力权重后筛选掉一部分不符合条件的注意力，让它的注意力权值为0，即可以理解为不再注意这些不符合条件的部分。
 
-2. Encoder-Decoder框架
+### Encoder-Decoder框架
 i.e. sequence to sequence
+序列到序列模型是一个模型，它采用一系列目标（单词，字母，图像的特征等）并输出另一个目标序列。 经过训练的模型可以这样工作：
+<video width="100%" height="auto" loop autoplay controls>
+  <source src="/assets/images/Attention_Model/seq2seq_1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 目前绝大多数文献中出现的AM(Attention Model)模型是附着在Encoder-Decoder框架下的，当然，其实AM模型可以看作一种通用的思想，本身并不依赖于Encoder-Decoder模型，这点需要注意。Encoder-Decoder框架可以看作是一种文本处理领域的研究模式，应用场景异常广泛，
 
