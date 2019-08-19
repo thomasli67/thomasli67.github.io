@@ -59,12 +59,22 @@ Here is an example MathJax inline rendering \\( 1/x^{2} \\), and here is a block
 
 $$
 \begin{equation}
-  s_{kk'}=
+  X =
   \left(
   \begin{array}{ccc}
-          h_{1k} &
+          x_{1} &
           \cdots &
-          h_{nk}
+          x_{m}
+  \end{array}
+  \right)
+\end{equation} 
+\begin{equation}
+  Y =
+  \left(
+  \begin{array}{ccc}
+          y_{1} &
+          \cdots &
+          y_{n}
   \end{array}
   \right)
 \end{equation} 
