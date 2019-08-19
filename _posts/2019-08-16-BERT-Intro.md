@@ -74,7 +74,6 @@ Transformer 的 encoder 是一次性读取整个文本序列，而不是从左�
  * 用 softmax 计算词汇表中每个单词的概率
 BERT 的损失函数只考虑了 mask 的预测值，忽略了没有掩蔽的字的预测。这样的话，模型要比单向模型收敛得慢，不过结果的情境意识增加了。
 
-
 ![图片 by Rani Horev](/assets/images/BERT_Intro/03.webp)
 
 2. Next Sentence Prediction (NSP)
