@@ -47,9 +47,8 @@ markdown: kramdown
 kramdown:
     input: GFM
 
-math:
-  enable: true
-  mathjax: true
+
+mathjax: true
 # Default Attributes
 ## Docs: https://jekyllrb.com/docs/configuration/#front-matter-defaults
 defaults:

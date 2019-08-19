@@ -57,6 +57,19 @@ $$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$
 
 Here is an example MathJax inline rendering \\( 1/x^{2} \\), and here is a block rendering: 
 
+$$
+\begin{equation}
+  s_{kk'}=
+  \left(
+  \begin{array}{ccc}
+          h_{1k} &
+          \cdots &
+          h_{nk}
+  \end{array}
+  \right)
+\end{equation} 
+$$
+
 Encoder顾名思义就是对输入句子X进行编码，将输入句子通过非线性变换转化为中间语义表示C(C为一个张量或者其他表示)：
 
 [公式]
