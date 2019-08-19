@@ -32,13 +32,25 @@ i.e. sequence to sequence
   Your browser does not support the video tag.
 </video>
 
-目前绝大多数文献中出现的AM(Attention Model)模型是附着在Encoder-Decoder框架下的，当然，其实AM模型可以看作一种通用的思想，本身并不依赖于Encoder-Decoder模型，这点需要注意。Encoder-Decoder框架可以看作是一种文本处理领域的研究模式，应用场景异常广泛，
+序列到序列模型由编码器和解码器组成。编码器处理输入序列中的每个项目，它将捕获的信息编译成向量（称为上下文）。 在处理整个输入序列之后，编码器将上下文发送到解码器，解码器逐项开始产生输出序列。
+<video width="100%" height="auto" loop autoplay  controls>
+  <source src="/assets/images/Attention_Model/seq2seq_3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+这同样适用于机器翻译。
+<video width="100%" height="auto" loop autoplay  controls>
+  <source src="/assets/images/Attention_Model/seq2seq_4.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
+目前绝大多数文献中出现的AM(Attention Model)模型是附着在Encoder-Decoder框架下的。
 
+![](/assets/images/Attention_Model/01.png)
 图1 抽象的Encoder-Decoder框架
+
 Encoder-Decoder框架可以这么直观地去理解：可以把它看作适合处理由一个句子（或篇章）生成另外一个句子（或篇章）的通用处理模型。对于句子对<X,Y>。 --------（思考：<X,Y>对很通用，X是一个问句，Y是答案；X是一个句子，Y是抽取的关系三元组；X是汉语句子，Y是汉语句子的英文翻译。等等），我们的目标是给定输入句子X，期待通过Encoder-Decoder框架来生成目标句子Y。X和Y可以是同一种语言，也可以是两种不同的语言。而X和Y分别由各自的单词序列构成：
 
-[公式]
+\\[ \frac{1}{n^{2}} \\]
 
 Encoder顾名思义就是对输入句子X进行编码，将输入句子通过非线性变换转化为中间语义表示C(C为一个张量或者其他表示)：
 
