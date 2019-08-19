@@ -20,9 +20,15 @@ tags:
 
 ### Encoder-Decoder框架
 i.e. sequence to sequence
-序列到序列模型是一个模型，它采用一系列目标（单词，字母，图像的特征等）并输出另一个目标序列。 经过训练的模型可以这样工作：
+序列到序列模型是一个模型，它采用一个目标序列（单词，字母，图像的特征等）并输出另一个目标序列。 经过训练的模型可以这样工作：
 <video width="100%" height="auto" loop autoplay controls>
   <source src="/assets/images/Attention_Model/seq2seq_1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+在神经网络机器翻译中，序列是一系列单词，一个接一个地处理。 输出同样是一系列的词：
+<video width="100%" height="auto" loop autoplay controls>
+  <source src="/assets/images/Attention_Model/seq2seq_2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
