@@ -62,7 +62,8 @@ $$
   \end{array}
   \right)
 \end{equation} 
-$$    
+$$
+
 $$
 \begin{equation}
   \mathbf{Y} =
@@ -127,7 +128,7 @@ $$
 
 $$
 \begin{aligned}
-  \mathbf{y}_{1} =\mathbf{f} \mathbf{1}\left(\mathbf{C}_{1}\right) \\ \mathbf{y}_{2} &amp;=\mathbf{f 1}\left(\mathbf{C}_{2}, \mathbf{y}_{1}\right) \\ \mathbf{y}_{3} =\mathbf{f} \mathbf{1}\left(\mathbf{C}_{3}, \mathbf{y}_{1}, \mathbf{y}_{2}\right) 
+  \mathbf{y}_{1} =\mathbf{f} \mathbf{1}\left(\mathbf{C}_{1}\right) \\ \mathbf{y}_{2} =\mathbf{f 1}\left(\mathbf{C}_{2}, \mathbf{y}_{1}\right) \\ \mathbf{y}_{3} =\mathbf{f} \mathbf{1}\left(\mathbf{C}_{3}, \mathbf{y}_{1}, \mathbf{y}_{2}\right) 
 \end{aligned}
 $$
 
@@ -148,20 +149,24 @@ $$
 e_{i j}=a\left(s_{i-1}, h_{j}\right)
 $$
 
-[公式] 是一个softmax模型输出，概率值的和为1。 [公式] 表示一个对齐模型，用于衡量encoder端的位置j个词，对于decoder端的位置i个词的对齐程度（影响程度），换句话说：decoder端生成位置i的词时，有多少程度受encoder端的位置j的词影响。对齐模型 [公式] 的计算方式有很多种，不同的计算方式，代表不同的Attention模型，最简单且最常用的的对齐模型是dot product乘积矩阵，即把target端的输出隐状态ht与source端的输出隐状态进行矩阵乘。常见的对齐计算方式如下：
+\\( \alpha_{i j} \\) 是一个softmax模型输出，概率值的和为1。 \\( e_{i j} \\) 表示一个对齐模型，用于衡量encoder端的位置j个词，对于decoder端的位置i个词的对齐程度（影响程度），换句话说：decoder端生成位置i的词时，有多少程度受encoder端的位置j的词影响。对齐模型 \\( e_{i j} \\) 的计算方式有很多种，不同的计算方式，代表不同的Attention模型，最简单且最常用的的对齐模型是dot product乘积矩阵，即把target端的输出隐状态ht与source端的输出隐状态进行矩阵乘。常见的对齐计算方式如下：
 
-[公式]
+$$
+\text{score}(\mathbf{h}_t,\bar{\mathbf{h}_s}) = \begin{cases} \mathbf{h}_t^T \bar{\mathbf{h}_s} \qquad\qquad\qquad dot \\ \mathbf{h}_t^T \mathbf{W}_a \bar{\mathbf{h}_s} \qquad\qquad general \\ \mathbf{v}_a^T \text{tanh}[\mathbf{h}_t^T : \bar{\mathbf{h}_s}] \quad concat \\ \end{cases}
+$$
 
-其中, [公式] 表示源端与目标单单词对齐程度。可见，常见的对齐关系计算方式有，点乘（Dot product），权值网络映射（General）和concat映射几种方式。
+其中, \\( \operatorname{score}\left(h_{t}, h_{s}\right) = a_{ij} \\) 表示源端与目标单单词对齐程度。可见，常见的对齐关系计算方式有，点乘（Dot product），权值网络映射（General）和concat映射几种方式。
 
+![](/assets/images/Attention_Model/03.png)
 
 假设Ci中那个i就是上面的“汤姆”，那么Tx就是3，代表输入句子的长度，h1=f(“Tom”)，h2=f(“Chase”),h3=f(“Jerry”)，对应的注意力模型权值分别是0.6,0.2,0.2，所以g函数就是个加权求和函数。如果形象表示的话，翻译中文单词“汤姆”的时候，数学公式对应的中间语义表示Ci的形成过程类似下图：
 
-
+![](/assets/images/Attention_Model/04.png)
 图3 Ci的形成过程
+
 这里还有一个问题：生成目标句子某个单词，比如“汤姆”的时候，你怎么知道AM模型所需要的输入句子单词注意力分配概率分布值呢？就是说“汤姆”对应的概率分布：
 
-　　划重点(注意力权重获取的过程)（Tom,0.3）（Chase,0.2）（Jerry,0.5）是如何得到的呢？
+　　注意力权重获取的过程（Tom,0.3）（Chase,0.2）（Jerry,0.5）是如何得到的呢？
 
 　　为了便于说明，我们假设对图1的非AM模型的Encoder-Decoder框架进行细化，Encoder采用RNN模型，Decoder也采用RNN模型，这是比较常见的一种模型配置，则图1的图转换为下图：
 
