@@ -59,10 +59,10 @@ Here is an example MathJax inline rendering \\( 1/x^{2} \\), and here is a block
 
 $$
 \begin{equation}
-  X =
+  \mathbf{X} =
   \left(
   \begin{array}{ccc}
-          x_{1} &
+          x_{1},x_{2} &
           \cdots &
           x_{m}
   \end{array}
@@ -71,10 +71,10 @@ $$
 $$    
 $$
 \begin{equation}
-  Y =
+  \mathhbf{Y} =
   \left(
   \begin{array}{ccc}
-          y_{1} &
+          y_{1},y_{2} &
           \cdots &
           y_{n}
   \end{array}
@@ -84,7 +84,19 @@ $$
 
 Encoder顾名思义就是对输入句子X进行编码，将输入句子通过非线性变换转化为中间语义表示C(C为一个张量或者其他表示)：
 
-[公式]
+$$
+\begin{equation}
+  \mathcal{C} =
+  \mathcal{F}
+  \left(
+  \begin{array}{ccc}
+          x_{1},x_{2} &
+          \cdots &
+          x_{m}
+  \end{array}
+  \right)
+\end{equation} 
+$$
 
 对于解码器Decoder来说，其任务是根据句子X的中间语义表示C和之前已经生成的历史信息 [公式] 来生成i时刻要生成的单词 [公式] ：
 
