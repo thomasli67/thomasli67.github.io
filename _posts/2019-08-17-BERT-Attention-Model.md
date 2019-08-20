@@ -55,8 +55,6 @@ $$ \frac{1}{n^{2}} $$
 
 $$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$
 
-Here is an example MathJax inline rendering \\( 1/x^{2} \\), and here is a block rendering: 
-
 $$
 \begin{equation}
   \mathbf{X} =
@@ -71,7 +69,7 @@ $$
 $$    
 $$
 \begin{equation}
-  \mathhbf{Y} =
+  \mathbf{Y} =
   \left(
   \begin{array}{ccc}
           y_{1},y_{2} &
@@ -98,15 +96,17 @@ $$
 \end{equation} 
 $$
 
-对于解码器Decoder来说，其任务是根据句子X的中间语义表示C和之前已经生成的历史信息 [公式] 来生成i时刻要生成的单词 [公式] ：
+对于解码器Decoder来说，其任务是根据句子X的中间语义表示C和之前已经生成的历史信息 \\( y_1,y_2….y_{i-1} \\) 来生成i时刻要生成的单词 \\( y_i \\) ：
 
-[公式]
+$$
+\mathrm{y}_{\mathrm{i}}=\mathcal{G}\left(\mathrm{C}, \mathrm{y}_{1}, \mathrm{y}_{2} \dots \mathrm{y}_{\mathrm{i}-1}\right)
+$$
 
-每个yi都依次这么产生，那么看起来就是整个系统根据输入句子X生成了目标句子Y。 ------（思考：其实这里的Encoder-Decoder是一个序列到序列的模型seq2seq，这个模型是对顺序有依赖的。）
+每个\\( y_i \\) 都依次这么产生，那么看起来就是整个系统根据输入句子X生成了目标句子Y。 ------（其实这里的Encoder-Decoder是一个序列到序列的模型seq2seq，这个模型是对顺序有依赖的。）
 
 Encoder-Decoder是个非常通用的计算框架，至于Encoder和Decoder具体使用什么模型都是由研究者自己定的，常见的比如 CNN / RNN / BiRNN / GRU / LSTM / Deep LSTM 等，这里的变化组合非常多。
 
-3. Attention Model
+### Attention Model
 以上介绍的Encoder-Decoder模型是没有体现出“注意力模型”的，所以可以把它看作是注意力不集中的分心模型。为什么说它注意力不集中呢？请观察下目标句子Y中每个单词的生成过程如下：
 
 [公式]
